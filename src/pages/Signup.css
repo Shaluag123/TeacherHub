@@ -1,73 +1,122 @@
-.login-page{
-    display:flex;
-    flex-direction:column;
+/* Center the form on the page and set a max width */
+/* Signup page container */
+.signup-page {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height:100vh;
-    background-color:black;
-    color:white;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
 }
-.login-page h1{
-    margin-bottom:20px;
-    font-size:2rem;
-    text-align:center;
-    color:white;
+
+/* Form styling */
+.signup-page form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+}
+
+/* Input field styling */
+.signup-page input[type="text"],
+.signup-page input[type="email"],
+.signup-page input[type="password"],
+.signup-page select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #fff;
+    background-color: inherit;
+    color: #fff;
+    border-radius: 4px;
 
 }
-.login-page form{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    background-color:#222;
-    padding:30px;
-    border-radius:8px;
-    box-shadow:0px 4px 10px rgba(0,0,0,0.5);
-} 
-.login-page input[type="email"], input[type="password"]{
-    width:250px;
-    padding:10px;
-    margin-bottom:15px;
-    border:2px solid #fff;
-    background-color:transparent;
-    color:#fff;
-    border-radius:4px;
+
+
+.signup-page input[type="email"] {
+    margin-bottom: 0px;
+}
+
+.signup-page input[type="text"]::placeholder,
+.signup-page input[type="email"]::placeholder,
+.signup-page input[type="password"]::placeholder {
+    color: #ccc;
+}
+
+.signup-page input[type="text"]:focus,
+.signup-page input[type="email"]:focus,
+.signup-page input[type="password"]:focus,
+.signup-page select:focus {
+    outline: none;
+    border-color: #f0f0f0;
+}
+
+/* OTP section: container for email input and send OTP button */
+.signup-page .email-otp-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
 
 }
-.login-page input[type="email"]::placeholder,input[type="password"]::placeholder{
-    color:#ccc;
 
+/* Email input field will take 75% width */
+.email-otp-container input[type="email"] {
+    width: 75%;
 }
-.login-page input[type="email"]:focus,input[type="password"]:focus{
-    outline:none;
-    border-color:#f0f0f0;
 
-    
+/* Send OTP button styling */
+.send-otp-btn {
+    width: 20%;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
 }
-.login-page button[type="submit"]{
-    width:100%;
-    padding:10px;
-    background-color:#fff;
-    color:#000;
-    border:none;
-    border-radius:4px;
-    cursor:pointer;
-    font-weight:bold;
+
+.send-otp-btn:hover {
+    background-color: #f0f0f0;
 }
-.login-page button[type="submit"]:hover{
-    background-color:#f0f0f0;
+
+/* Signup button */
+.signup-page button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
-.login-page .signup-link{
-    margin-top:15px;
+
+.signup-page button[type="submit"]:hover {
+    background-color: #f0f0f0;
 }
-.login-page .signup-link p{
-    color:#ccc;
+
+/* Login link styling */
+.login-link {
+    margin-top: 15px;
 }
-.login-page .signup-link a{
-    color:#fff;
+
+.login-link p {
+    color: #ccc;
+}
+
+.login-link a {
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
-.login-page .signup-link a:hover{
-    color:#f0f0f0;
 
+.login-link a:hover {
+    color: #f0f0f0;
 }
